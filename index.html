@@ -1,0 +1,250 @@
+<html>
+
+
+<head>
+
+<title>Endurance</title>
+
+</head>
+
+<body>
+
+<audio id="sound" href="ABshot.ogg" type="audio/ogg">
+
+<source src="ABshot.ogg" type="audio/ogg">
+    
+</audio>
+
+    <div id="hitbox" onmouseover="sound()">
+
+    <div onmouseover="point()">
+        
+        <div id="target"></div>
+
+    </div>
+     </div>
+
+    <h1 align="center" id="score">score: 100</h1>
+    <button type="button" id ="btn">劣炎杜汪杜</button>
+    <div id="cursor"></div>
+
+    <div onclick="tim3r()">
+          <button type="button" id="btns" onclick="start()" align="top">start</button>
+    </div>
+  
+
+
+    <h1 id="sec">seconds: 0</h1>
+    <h1 id="text_gameover"></h1>
+    
+    
+
+   <script type="text/javascript">
+    
+   let i;
+   let x, y, z;
+   let p = 0;
+   let score;
+   let decay = 100;
+   let text_gameover;
+   let cursor;
+
+
+   i = document.getElementById('target');
+   i.addEventListener("mouseover", tp_target);
+
+   function tp_target() {
+
+    x = (Math.random() * 500) + 1;
+    y = (Math.random() * 500) + 1;
+    z = (Math.random() * 500) + 1;
+
+    i.style.left = x + "px";
+    i.style.top = y + "px";
+    i.style.right = z + "px";
+
+   }
+
+   let pi = document.getElementById('score');
+  
+
+   function start() { 
+
+
+   let time = setInterval(() => {
+
+   pi.innerHTML = "score: " + decay;
+   decay--;
+
+   if(decay == -0) {
+
+   clearInterval(time);
+   text_gameover = document.getElementById("text_gameover");
+   text_gameover.innerHTML = "Game Over";
+   i.remove();
+
+   }
+
+   }, 200);
+
+   }
+
+
+   let t1mer;
+   let s = 0;
+
+   function tim3r() { 
+
+   let sec = setInterval(() => {
+
+   t1mer = document.getElementById('sec');
+   t1mer.innerHTML = "seconds: " + s;
+   s++;
+
+   if(decay == -0) {
+
+   clearInterval(sec);
+
+   }
+
+   }, 1000);
+   
+   }
+
+   function point(Decay) {
+
+   
+    Decay = decay++;
+
+    score = document.getElementById('score');
+    score.innerHTML = 'score: ' + Decay;
+    Decay++;
+
+   }
+
+
+    let btn = document.getElementById('btn');
+    btn.addEventListener('click', setBackground);
+
+   
+    function setBackground() {
+
+    if(document.body.style.background = "#fff") { 
+
+    document.body.style.background = "#000";
+    document.body.style.color= "#fff";
+    i.style.background = "#fff";
+    
+    } else if(document.body.style.background = "#000") {
+        
+    document.body.style.background = "#fff";
+    document.body.style.color= "#000";
+    i.style.background = "#000";
+    
+    }
+
+    }
+
+    function sound() {
+
+        let sound = document.getElementById('sound');
+        sound.play();
+
+    }
+
+    cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', cursore);
+    
+    function cursore(e) {
+
+    let y3 = e.clientY;
+    let x3 = e.clientX;
+
+    cursor.style.left = x3 + "px";
+    cursor.style.top = y3 + "px";
+
+    }
+
+
+
+
+
+   </script>
+    
+</body>
+
+</html>
+
+<style>
+
+   * {
+   cursor:none;
+   font-family:arial;
+   align-items:center;
+
+   }
+
+
+    #target {
+
+        width:95px;
+        height:95px;
+        border:1px solid black;
+        background:black;
+        position:absolute;
+        border-radius:48px;
+        
+        }
+
+    #cursor {
+
+        height:30px;
+        width:30px;
+        border:1px solid cyan;
+        background: cyan;
+        position:absolute;
+        border-radius:40px;
+        transform:translate(-50%,-50%);
+        z-index:1;
+        pointer-events:none;
+
+    } 
+
+    #hitbox {
+
+        position:absolute;
+        top:37%;
+        left:45%;
+
+    }
+
+    #btns {
+
+        position:absolute;
+        left:48%;
+    }
+
+    #btn {
+        position:absolute;
+        top:3%;
+        left:4%;
+    }
+
+    #sec {
+
+        position:absolute;
+        left:25%;
+        
+    } 
+
+    #text_gameover {
+
+        position:absolute;
+        left:45%;
+
+    }
+
+</style>
+
+
+
