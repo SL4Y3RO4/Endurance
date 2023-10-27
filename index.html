@@ -27,7 +27,6 @@
     <h1 align="center" id="score">score: 100</h1>
     <button type="button" id ="btn">劣炎杜汪杜</button>
     <div id="cursor"></div>
-    <button id="default" onclick="def4ult()">windows setting</button>
 
     <div onclick="tim3r()">
           <button type="button" id="btns" onclick="start()" align="top">start</button>
@@ -40,96 +39,96 @@
     
     
 
-   <script type="text/javascript">
+    <script type="text/javascript">
     
-   let i;
-   let x, y, z;
-   let p = 0;
-   let score;
-   let decay = 100;
-   let text_gameover;
-   let cursor;
-   let btns;
-   let sec;
-   let btn1;
-   let scorez;
+     let i;
+     let x, y, z;
+     let p = 0;
+     let score;
+     let decay = 100;
+     let text_gameover;
+     let cursor;
+     let sec;
+     let btns;
+     let btn1;
+     let scorez;
 
 
-   i = document.getElementById('target');
-   i.addEventListener("mouseover", tp_target);
+     i = document.getElementById('target');
+     i.addEventListener("mouseover", tp_target);
 
-   function tp_target() {
+     function tp_target() {
 
-    x = (Math.random() * 500) + 1;
-    y = (Math.random() * 500) + 1;
-    z = (Math.random() * 500) + 1;
+     x = (Math.random() * 500) + 1;
+     y = (Math.random() * 500) + 1;
+     z = (Math.random() * 500) + 1;
 
-    i.style.left = x + "px";
-    i.style.top = y + "px";
-    i.style.right = z + "px";
+     i.style.left = x + "px";
+     i.style.top = y + "px";
+     i.style.right = z + "px";
 
-   }
+     }
 
-   let pi = document.getElementById('score');
-
-
-   sec = document.getElementById('sec');
-   btns = document.getElementById('btns');
-   btn1 = document.getElementById('btn');
-   scorez = document.getElementById('score');
-
-   function start() { 
-
-    sec.style.display = 'none';
-    btns.style.display = 'none';
-    btn1.style.display = 'none';
-    scorez.style.display = 'none';
-
-   let time = setInterval(() => {
-
-   pi.innerHTML = "score: " + decay;
-   decay--;
-
-   if(decay == -0) {
-
-   clearInterval(time);
-   sec.style.display = 'block';
-   //btns.style.display = 'block';
-   //btn1.style.display = 'block';
-   scorez.style.display = 'block';
-   text_gameover = document.getElementById("text_gameover");
-   text_gameover.innerHTML = "Game Over";
-   i.remove();
-
-   }
-
-   }, 200);
-
-   }
+     let pi = document.getElementById('score');
 
 
-   let t1mer;
-   let s = 0;
+     sec = document.getElementById('sec');
+     btns = document.getElementById('btns');
+     btn1 = document.getElementById('btn');
+     scorez = document.getElementById('score');
 
-   function tim3r() { 
+     function start() { 
 
-   let sec = setInterval(() => {
+     sec.style.display = 'none';
+     btns.style.display = 'none';
+     btn1.style.display = 'none';
+     scorez.style.display = 'none';
 
-   t1mer = document.getElementById('sec');
-   t1mer.innerHTML = "seconds: " + s;
-   s++;
+    let time = setInterval(() => {
 
-   if(decay == -0) {
+    pi.innerHTML = "score: " + decay;
+    decay--;
 
-   clearInterval(sec);
+    if(decay == -0) {
 
-   }
+    clearInterval(time);
+    sec.style.display = 'block';
+    //btns.style.display = 'block';
+    //btn1.style.display = 'block';
+    scorez.style.display = 'block';
+    text_gameover = document.getElementById("text_gameover");
+    text_gameover.innerHTML = "Game Over";
+    i.remove();
 
-   }, 1000);
+    }
+
+    }, 200);
+
+    }
+
+
+    let t1mer;
+    let s = 0;
+
+    function tim3r() { 
+
+    let sec = setInterval(() => {
+
+    t1mer = document.getElementById('sec');
+    t1mer.innerHTML = "seconds: " + s;
+    s++;
+
+    if(decay == -0) {
+
+    clearInterval(sec);
+
+    }
+
+    }, 1000);
    
-   }
+    }
 
-   function point(Decay) {
+    function point(Decay) {
 
    
     Decay = decay++;
@@ -182,18 +181,8 @@
     cursor.style.top = y3 + "px";
 
     }
-
-    let g = document.querySelector('*');
-
-    function def4ult() {
-
-    cursor.remove();
-    g.style.cursor = 'pointer';
-
-    }
-
        
-   </script>
+    </script>
     
 </body>
 
@@ -203,15 +192,15 @@
 
    * {
        
-   cursor:none;
-   font-family:arial;
-   align-items:center;
+        cursor:none;
+        font-family:arial;
+        align-items:center;
  
    }
 
     body {
         
-          display:block;
+        display:block;
 
     }
 
@@ -230,8 +219,8 @@
 
         height:30px;
         width:30px;
-        border:1px solid cyan;
-        background: cyan;
+        border:1px solid black;
+        background: black;
         position:absolute;
         border-radius:40px;
         transform:translate(-50%,-50%);
@@ -252,17 +241,15 @@
 
         position:absolute;
         left:48%;
+        
     }
 
     #btn {
+        
         position:absolute;
         top:3%;
         left:4%;
-    }
-
-    #default {
-        position:absolute;
-        left:82%;
+        
     }
 
     #sec {
