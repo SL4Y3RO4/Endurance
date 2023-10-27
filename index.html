@@ -48,6 +48,9 @@
    let decay = 100;
    let text_gameover;
    let cursor;
+   let btns;
+   let sec;
+   let btn;
 
 
    i = document.getElementById('target');
@@ -66,14 +69,19 @@
    }
 
    let pi = document.getElementById('score');
-  
+
+
+   sec = document.getElementById('sec');
+   btns = document.getElementById('btns');
+   btn = document.getElementById('btn');
 
    function start() { 
 
-    if(sec.style.display == 'block' && text_gameover.style.display == 'block' && btns.style.display == 'block') {
+    if(sec.style.display == 'block' && btn.style.display == 'block' && btns.style.display == 'block') {
 
     sec.style.display = 'none';
     btns.style.display = 'none';
+    btn.style.display = 'none';
 
     }
 
@@ -85,8 +93,9 @@
    if(decay == -0) {
 
    clearInterval(time);
-   sec.style.display == 'none';
-   btns.style.display == 'none';
+   sec.style.display = 'block';
+   btns.style.display = 'block';
+   btn.style.display = 'block';
    text_gameover = document.getElementById("text_gameover");
    text_gameover.innerHTML = "Game Over";
    i.remove();
