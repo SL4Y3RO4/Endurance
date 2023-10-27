@@ -50,7 +50,7 @@
    let cursor;
    let btns;
    let sec;
-   let btn;
+   let btn1;
 
 
    i = document.getElementById('target');
@@ -77,11 +77,11 @@
 
    function start() { 
 
-    if(sec.style.display == 'block' && btn.style.display == 'block' && btns.style.display == 'block') {
+    if(sec.style.display == 'block' && btn1.style.display == 'block' && btns.style.display == 'block') {
 
     sec.style.display = 'none';
     btns.style.display = 'none';
-    btn.style.display = 'none';
+    btn1.style.display = 'none';
 
     }
 
@@ -97,7 +97,7 @@
    clearInterval(time);
    sec.style.display = 'block';
    btns.style.display = 'block';
-   btn.style.display = 'block';
+   btn1.style.display = 'block';
    text_gameover = document.getElementById("text_gameover");
    text_gameover.innerHTML = "Game Over";
    i.remove();
