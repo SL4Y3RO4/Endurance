@@ -73,15 +73,15 @@
 
 
    sec = document.getElementById('sec');
-   btns = document.getElementById('btns');
-   btn1 = document.getElementById('btn');
+   //btns = document.getElementById('btns');
+   //btn1 = document.getElementById('btn');
    scorez = document.getElementById('score');
 
    function start() { 
 
     sec.style.display = 'none';
-    btns.style.display = 'none';
-    btn1.style.display = 'none';
+    //btns.style.display = 'none';
+    //btn1.style.display = 'none';
     scorez.style.display = 'none';
 
    let time = setInterval(() => {
@@ -93,8 +93,8 @@
 
    clearInterval(time);
    sec.style.display = 'block';
-   btns.style.display = 'block';
-   btn1.style.display = 'block';
+   //btns.style.display = 'block';
+   //btn1.style.display = 'block';
    scorez.style.display = 'block';
    text_gameover = document.getElementById("text_gameover");
    text_gameover.innerHTML = "Game Over";
