@@ -27,6 +27,7 @@
     <h1 align="center" id="score">score: 100</h1>
     <button type="button" id ="btn">劣炎杜汪杜</button>
     <div id="cursor"></div>
+    <button id="default" onclick="def4ult()">windows setting</button>
 
     <div onclick="tim3r()">
           <button type="button" id="btns" onclick="start()" align="top">start</button>
@@ -182,10 +183,16 @@
 
     }
 
+    let g = document.getElementById('*');
 
+    function def4ult() {
 
+    cursor.remove();
+    g.style.cursor = 'pointer';
 
+    }
 
+       
    </script>
     
 </body>
@@ -251,6 +258,11 @@
         position:absolute;
         top:3%;
         left:4%;
+    }
+
+    #default {
+        position:absolute;
+        left:82%;
     }
 
     #sec {
