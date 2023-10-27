@@ -70,6 +70,13 @@
 
    function start() { 
 
+   if(sec.style.display == 'none' && text_gameover.style.display == 'none' && btns.style.display == 'none') {
+
+       sec.style.display == 'block';
+       text_gameover.style.display == 'block';
+       btns.style.display == 'block';
+
+   }
 
    let time = setInterval(() => {
 
@@ -79,6 +86,9 @@
    if(decay == -0) {
 
    clearInterval(time);
+   sec.style.display == 'none';
+   text_gameover.style.display == 'none';
+   btns.style.display == 'none';
    text_gameover = document.getElementById("text_gameover");
    text_gameover.innerHTML = "Game Over";
    i.remove();
