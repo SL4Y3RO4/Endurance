@@ -26,6 +26,7 @@
 
     <h1 align="center" id="score">score: 100</h1>
     <button type="button" id ="btn">劣炎杜汪杜</button>
+    <button id="btnr" onclick="reverse()">reverse mode</button>
     <div id="cursor"></div>
 
     <div onclick="tim3r()">
@@ -53,6 +54,9 @@
      let btn1;
      let scorez;
      let d3fault;
+     let reverse, 
+     let r2; 
+     let r3;
 
 
      i = document.getElementById('target');
@@ -77,6 +81,7 @@
      btns = document.getElementById('btns');
      btn1 = document.getElementById('btn');
      scorez = document.getElementById('score');
+     let btnr = document.getElementById('btnr');
 
      function start() { 
 
@@ -84,6 +89,9 @@
      btns.style.display = 'none';
      btn1.style.display = 'none';
      scorez.style.display = 'none';
+     btnr.style.display = 'none;
+
+    
 
     let time = setInterval(() => {
 
@@ -218,6 +226,19 @@
     }
             
     });
+
+    function reverse() {
+
+    reverse = document.getElementById('target');
+    r2 = document.getElementById('sec');
+    r3 = document.getElementById('score');
+
+    reverse.style.background = "dark green";
+    r2.style.color = "pink";
+    r3.style.color = "score";
+    document.body.style.background = "gray";
+
+    }
     
        
     </script>
@@ -251,9 +272,7 @@
         position:absolute;
         border-radius:48px;
         
-        }
-
-    
+        }    
 
    /* #cursor {
 
@@ -292,6 +311,13 @@
         top:3%;
         left:4%;
         
+    }
+
+    #btnr {
+        
+        position:absolute;
+        top:5%;
+        left:4%;
     }
 
     #sec {
