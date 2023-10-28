@@ -26,7 +26,6 @@
 
     <h1 align="center" id="score">score: 100</h1>
     <button type="button" id ="btn">劣炎杜汪杜</button>
-    <button id="default" onclick="default1()">windows default cursor</button>
     <div id="cursor"></div>
 
     <div onclick="tim3r()">
@@ -189,7 +188,7 @@
     cursor = document.getElementById('cursor');
     document.addEventListener('mousemove', cursore);
     
-    function cursore(e) {
+   /* function cursore(e) {
 
     let y3 = e.clientY;
     let x3 = e.clientX;
@@ -198,6 +197,7 @@
     cursor.style.top = y3 + "px";
 
     }
+    */
     
        
     </script>
@@ -209,8 +209,7 @@
 <style>
 
    * {
-
-        cursor:pointer;
+       
         font-family:arial;
         align-items:center;
  
@@ -233,7 +232,9 @@
         
         }
 
-    #cursor {
+    
+
+   /* #cursor {
 
         height:30px;
         width:30px;
@@ -246,6 +247,8 @@
         pointer-events:none;
 
     } 
+
+    */
 
     #hitbox {
 
