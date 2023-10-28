@@ -179,25 +179,6 @@
     }
 
     }
-
-    document.addEventListener('keydown', (event) => { 
-            
-          
-    if(event.key == 'r') {
-
-    let i2 = document.getElementById('target');
-
-    x2 = (Math.random() * 255) + 1;
-    y2 = (Math.random() * 255) + 1;
-    z2 = (Math.random() * 255) + 1;
-
-    i2.style.left = x + "px";    
-    i2.style.top = y + "px";  
-    i2.style.right = z + "px";  
-
-    }
-            
-    });
         
     function sound() {
 
@@ -219,6 +200,24 @@
 
     }
     */
+
+    document.addEventListener('keydown', (event) => { 
+                 
+    if(event.key == 'r') {
+
+    let i2 = document.getElementById('target');
+
+    x2 = (Math.random() * 255) + 1;
+    y2 = (Math.random() * 255) + 1;
+    z2 = (Math.random() * 255) + 1;
+
+    i2.style.left = x + "px";    
+    i2.style.top = y + "px";  
+    i2.style.right = z + "px";  
+
+    }
+            
+    });
     
        
     </script>
