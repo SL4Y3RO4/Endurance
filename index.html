@@ -26,7 +26,9 @@
 
     <h1 align="center" id="score">score: 100</h1>
     <button type="button" id ="btn">劣炎杜汪杜</button>
-    <button id="btnr" onclick="reverse()">reverse mode</button>
+    
+    <button id="btnr">reverse mode</button>
+    
     <div id="cursor"></div>
 
     <div onclick="tim3r()">
@@ -228,7 +230,10 @@
             
     });
 
-    function reverse() {
+    reverse = document.getElementById('btnr');
+    reverse.addEventListener('click', revers3);
+
+    function revers3() {
 
     reverse = document.getElementById('target');
     r2 = document.getElementById('sec');
