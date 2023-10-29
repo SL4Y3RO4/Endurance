@@ -15,21 +15,33 @@
     
 </audio>
 
+    
+           
+    <div id="corner">
+         
     <div id="hitbox" onmouseover="sound()">
+  
+    <div id="barrier" onmouseover="point()">
 
-    <div onmouseover="point()">
+    <div>
+
+    <div id="target"></div>
         
-        <div id="target"></div>
-
     </div>
-     </div>
+    </div>
+    </div>
+    </div>
 
     <h1 align="center" id="score">score: 100</h1>
     <button type="button" id ="btn">劣炎杜汪杜</button>
-    
-    <button id="btnr">reverse mode</button>
-    
-    <div id="cursor"></div>
+
+
+    <div id="outline">
+        <div id="cursor"></div>
+    </div>
+
+
+    <div onkeydown="key()"></div>
 
     <div onclick="tim3r()">
           <button type="button" id="btns" onclick="start()" align="top">start</button>
@@ -51,19 +63,15 @@
      let decay = 100;
      let text_gameover;
      let cursor;
+     let outline;
      let sec;
      let btns;
      let btn1;
      let scorez;
      let d3fault;
-     let reverse; 
-     let r2; 
-     let r3;
-     let btnr;
-     let targetR;
 
 
-     i = document.getElementById('target');
+     i = document.getElementById('barrier');
      i.addEventListener("mouseover", tp_target);
 
      function tp_target() {
@@ -85,7 +93,6 @@
      btns = document.getElementById('btns');
      btn1 = document.getElementById('btn');
      scorez = document.getElementById('score');
-     btnr = document.getElementById('btnr');
 
      function start() { 
 
@@ -93,9 +100,6 @@
      btns.style.display = 'none';
      btn1.style.display = 'none';
      scorez.style.display = 'none';
-     btnr.style.display = 'none';
-
-    
 
     let time = setInterval(() => {
 
@@ -118,6 +122,27 @@
     }, 200);
 
     }
+
+   let u = document.addEventListener('keydown', (event) => { 
+            
+          
+        if(event.key == 'r') {
+
+        let i = document.getElementById('target');
+
+        x = (Math.random() * 255) + 1;
+        y = (Math.random() * 255) + 1;
+        z = (Math.random() * 255) + 1;
+
+        i.style.left = x + "px";    
+        i.style.top = y + "px";  
+        i.style.right = z + "px";  
+
+        }
+            
+        });
+
+    
 
 
     let t1mer;
@@ -152,6 +177,7 @@
 
    }
 
+    cursor = document.getElementById('cursor');
 
     let btn = document.getElementById('btn');
     btn.addEventListener('click', setBackground);
@@ -163,8 +189,10 @@
 
     document.body.style.background = "#000";
     document.body.style.color = "#fff";
-    i.style.background = "#fff";
-    //cursor.style.background = "#fff";
+    target.style.background = "#fff";
+    cursor.style.background = "#fff";
+    barrier.style.background = "#000";
+    outline.style.background = "#000";
     
     } else {
         
@@ -196,8 +224,9 @@
     sound.play();
 
     }
-    /*
-    cursor = document.getElementById('cursor');
+
+    
+    outline = document.getElementById('outline');
     document.addEventListener('mousemove', cursore);
     
     function cursore(e) {
@@ -205,48 +234,12 @@
     let y3 = e.clientY;
     let x3 = e.clientX;
 
-    cursor.style.left = x3 + "px";
-    cursor.style.top = y3 + "px";
-
-    }
-    */
-
-    let x2, y2, z2;
-
-    document.addEventListener('keydown', (event) => { 
-                 
-    if(event.key == 'r') {
-
-    let i2 = document.getElementById('target');
-
-    x2 = (Math.random() * 255) + 1;
-    y2 = (Math.random() * 255) + 1;
-    z2 = (Math.random() * 255) + 1;
-
-    i2.style.left = x + "px";    
-    i2.style.top = y + "px";  
-    i2.style.right = z + "px";  
-
-    }
-            
-    });
-
-    reverse = document.getElementById('btnr');
-    reverse.addEventListener('click', revers3);
-
-    function revers3() {
-        
-    r2 = document.getElementById('sec');
-    r3 = document.getElementById('score');
-
-    target.style.background = "#00906c";
-    target.style.border = "#00906c";
-    r2.style.color = "pink";
-    r3.style.color = "pink";
-    document.body.style.background = "gray";
+    outline.style.left = x3 + "px";
+    outline.style.top = y3 + "px";
 
     }
     
+
        
     </script>
     
@@ -258,7 +251,7 @@
 
    * {
        
-        cursor:pointer;
+        cursor:none;
         font-family:arial;
         align-items:center;
  
@@ -279,15 +272,17 @@
         position:absolute;
         border-radius:48px;
         
-        }    
+        } 
 
-   /* #cursor {
+      #cursor {
 
         height:30px;
         width:30px;
         border:1px solid black;
         background: black;
-        position:absolute;
+        position:relative;
+        left:48.8%;
+        top:51%;
         border-radius:40px;
         transform:translate(-50%,-50%);
         z-index:1;
@@ -295,14 +290,44 @@
 
     } 
 
-    */
+    #outline {
+
+        width:50px;
+        height:50px;
+        position:absolute;
+        border-radius:40px;
+        transform:translate(-50%,-50%);
+        z-index:1;
+        margin:0;
+        padding:0;
+        pointer-events:none;
+
+    }
 
     #hitbox {
 
-        position:absolute;
-        top:37%;
-        left:45%;
+        height:1px;
+        width:1px;
+    }
 
+    #barrier {
+
+        position:absolute;
+        top:39%;
+        left:48%;
+        width:100px;
+        height:100px;
+        padding:8px;
+
+    }
+
+    #corner {
+
+        height:400px;
+        width:800px;
+        position:absolute;
+        left:30%;
+        top:25%;
     }
 
     #btns {
@@ -318,13 +343,6 @@
         top:3%;
         left:4%;
         
-    }
-
-    #btnr {
-        
-        position:absolute;
-        top:8%;
-        left:4%;
     }
 
     #sec {
