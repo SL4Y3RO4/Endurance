@@ -123,28 +123,6 @@
 
     }
 
-   let u = document.addEventListener('keydown', (event) => { 
-            
-          
-        if(event.key == 'r') {
-
-        let i = document.getElementById('target');
-
-        x = (Math.random() * 255) + 1;
-        y = (Math.random() * 255) + 1;
-        z = (Math.random() * 255) + 1;
-
-        i.style.left = x + "px";    
-        i.style.top = y + "px";  
-        i.style.right = z + "px";  
-
-        }
-            
-        });
-
-    
-
-
     let t1mer;
     let s = 0;
 
@@ -164,6 +142,37 @@
 
     }, 1000);
    
+    }
+
+    let u = document.addEventListener('keydown', (event) => { 
+                 
+    if(event.key == 'r') {
+
+    let i = document.getElementById('target');
+
+    x = (Math.random() * 255) + 1;
+    y = (Math.random() * 255) + 1;
+    z = (Math.random() * 255) + 1;
+
+    i.style.left = x + "px";    
+    i.style.top = y + "px";  
+    i.style.right = z + "px";  
+
+    }
+            
+    });
+
+    if(event.key == 's') {
+
+    clearInterval(sec);
+    clearInterval(time);
+    sec.style.display = 'block';
+    scorez.style.display = 'block';
+    text_gameover = document.getElementById("text_gameover");
+    text_gameover.innerHTML = "Game Over";
+    i.remove();
+        
+
     }
 
     function point(Decay) {
@@ -205,7 +214,7 @@
 
     }
 
-    let g = document.querySelector('*');
+   /* let g = document.querySelector('*');
 
     function default1() {
 
@@ -217,6 +226,7 @@
     }
 
     }
+    */
         
     function sound() {
 
