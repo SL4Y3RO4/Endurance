@@ -2,7 +2,7 @@
 
 * {
        
-    cursor:none;
+    cursor:url('blackCircle.cur'), auto;
     font-family:arial;
     align-items:center;
 
@@ -24,8 +24,8 @@ body {
     border-radius:48px;
     
     } 
-
-  #cursor {
+/*
+   #cursor {
 
     height:30px;
     width:30px;
@@ -40,7 +40,7 @@ body {
     pointer-events:none;
 
 } 
-
+*/
 #outline {
 
     width:50px;
