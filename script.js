@@ -146,6 +146,7 @@ target.style.background = "#fff";
 cursor.style.background = "#fff";
 barrier.style.background = "#000";
 outline.style.background = "#000";
+document.style.cursor = 'url'('whiteCircle.cur')', auto';
 
 } else {
    
