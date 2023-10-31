@@ -46,7 +46,7 @@ scorez.style.display = 'none';
 
 time = setInterval(() => {
 
-pi.innerHTML = "score: " + decay;
+pi.innerHTML = "decay: " + decay;
 decay--;
 
 if(decay == -0) {
