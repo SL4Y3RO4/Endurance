@@ -2,7 +2,7 @@ let i;
 let x, y, z;
 let p = 0;
 let score;
-let decay = 100;
+let decay = 30;
 let text_gameover;
 let cursor;
 let outline;
@@ -62,7 +62,7 @@ i.remove();
 
 }
 
-}, 200);
+}, 175);
 
 }
 
