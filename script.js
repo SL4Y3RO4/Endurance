@@ -138,21 +138,22 @@ btn.addEventListener('click', setBackground);
 
 function setBackground() {
 
-if(document.body.style.background = "#fff") { 
+if(document.body.style.background == "white") { 
 
-document.body.style.background = "#000";
-document.body.style.color = "#fff";
-target.style.background = "#fff";
-cursor.style.background = "#fff";
-barrier.style.background = "#000";
+document.body.style.background = "black";
+document.body.style.color = "white";
+target.style.background = "white";
+//cursor.style.background = "white";
+barrier.style.background = "black";
 //outline.style.background = "#000";
 
 } else {
    
-document.body.style.background = "#fff";
-document.body.style.color = "#000";
-i.style.background = "#000";
-cursor.style.background = "#000";
+document.body.style.background = "white";
+document.body.style.color = "black";
+i.style.background = "black";
+target.style.background = "black";
+//cursor.style.background = "#000";
 
 }
 
