@@ -58,7 +58,7 @@ sec.style.display = 'block';
 scorez.style.display = 'block';
 text_gameover = document.getElementById("text_gameover");
 text_gameover.innerHTML = "Game Over";
-i.removeEventListener("mouseover", tp_target);
+i.remove();
 
 }
 
