@@ -125,7 +125,7 @@ function point(Decay) {
 Decay = decay++;
 
 score = document.getElementById('score');
-score.innerHTML = 'score: ' + Decay;
+score.innerHTML = 'decay: ' + Decay;
 Decay++;
 
 }
