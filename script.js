@@ -49,7 +49,7 @@ time = setInterval(() => {
 pi.innerHTML = "decay: " + decay;
 decay--;
 
-if(decay == -0) {
+if(decay == -1) {
 
 clearInterval(time);
 sec.style.display = 'block';
@@ -58,7 +58,7 @@ sec.style.display = 'block';
 scorez.style.display = 'block';
 text_gameover = document.getElementById("text_gameover");
 text_gameover.innerHTML = "Game Over";
-i.remove();
+i.removeEventListener("mouseover", tp_target);
 
 }
 
@@ -77,7 +77,7 @@ t1mer = document.getElementById('sec');
 t1mer.innerHTML = "seconds: " + s;
 s++;
 
-if(decay == -0) {
+if(decay == -1) {
 
 clearInterval(sec);
 
@@ -153,6 +153,7 @@ document.body.style.background = "white";
 document.body.style.color = "black";
 i.style.background = "black";
 target.style.background = "black";
+barrier.style.background = "white";
 //cursor.style.background = "#000";
 
 }
