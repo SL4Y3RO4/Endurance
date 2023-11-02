@@ -108,13 +108,8 @@ i.style.right = z + "px";
 
 if(event.key == 's') {
 
-clearInterval(this.sec);
-clearInterval(this.time);
 this.sec.style.display = 'block';
 scorez.style.display = 'block';
-text_gameover = document.getElementById("text_gameover");
-text_gameover.innerHTML = "Game Over";
-i.remove();
    
 }
        
