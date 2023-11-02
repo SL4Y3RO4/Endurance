@@ -11,6 +11,7 @@ let btn1;
 let scorez;
 let d3fault;
 let time;
+let insegna = document.getElementById('insegna');
 
 
 i = document.getElementById('barrier');
@@ -42,6 +43,7 @@ sec.style.display = 'none';
 btns.style.display = 'none';
 btn1.style.display = 'none';
 scorez.style.display = 'none';
+insegna.style.display = 'none';
 
 time = setInterval(() => {
 
@@ -55,6 +57,7 @@ sec.style.display = 'block';
 //btns.style.display = 'block';
 //btn1.style.display = 'block';
 scorez.style.display = 'block';
+insegna.style.display = 'block';
 pi.innerHTML = "Game Over";
 i.remove();
 
@@ -143,6 +146,7 @@ document.body.style.color = "white";
 target.style.background = "white";
 //cursor.style.background = "white";
 barrier.style.background = "black";
+insegna.style.color = "white";
 //outline.style.background = "#000";
 
 } else {
@@ -152,6 +156,7 @@ document.body.style.color = "black";
 i.style.background = "black";
 target.style.background = "black";
 barrier.style.background = "white";
+insegna.style.color = "black";
 //cursor.style.background = "#000";
 
 }
