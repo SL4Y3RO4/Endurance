@@ -3,7 +3,6 @@ let x, y, z;
 let p = 0;
 let score;
 let decay = 30;
-let text_gameover;
 let cursor;
 let outline;
 let sec;
@@ -56,8 +55,7 @@ sec.style.display = 'block';
 //btns.style.display = 'block';
 //btn1.style.display = 'block';
 scorez.style.display = 'block';
-text_gameover = document.getElementById("text_gameover");
-text_gameover.innerHTML = "Game Over";
+pi.innerHTML = "Game Over";
 i.remove();
 
 }
