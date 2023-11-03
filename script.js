@@ -138,6 +138,7 @@ if(document.body.style.background == "white") {
 
 document.body.style.background = "black";
 document.body.style.color = "white";
+document.body.style.cursor = 'url("whiteCircle.cur"), auto';
 target.style.background = "white";
 //cursor.style.background = "white";
 barrier.style.background = "black";
