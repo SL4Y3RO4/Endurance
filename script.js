@@ -150,6 +150,7 @@ insegna.style.color = "white";
 document.body.style.background = "white";
 document.body.style.color = "black";
 i.style.background = "black";
+document.body.style.cursor = 'url("cyanCircle.cur"), auto';
 target.style.background = "black";
 barrier.style.background = "white";
 insegna.style.color = "black";
