@@ -115,6 +115,14 @@ scorez.style.display = 'block';
        
 });
 
+if(event.key == 'd') {
+
+
+document.body.style.cursor = 'pointer';
+            
+}
+
+
 function point(Decay) {
 
 
