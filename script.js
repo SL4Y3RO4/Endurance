@@ -145,7 +145,7 @@ if(document.body.style.background == "white") {
 
 document.body.style.background = "black";
 document.body.style.color = "white";
-document.body.style.cursor = 'url("whiteCircle.cur"), auto';
+document.html.style.cursor = 'url("whiteCircle.cur"), auto';
 target.style.background = "white";
 //cursor.style.background = "white";
 barrier.style.background = "black";
@@ -157,7 +157,7 @@ insegna.style.color = "white";
 document.body.style.background = "white";
 document.body.style.color = "black";
 i.style.background = "black";
-document.body.style.cursor = 'url("cyanCircle.cur"), auto';
+document.html.style.cursor = 'url("cyanCircle.cur"), auto';
 target.style.background = "black";
 barrier.style.background = "white";
 insegna.style.color = "black";
