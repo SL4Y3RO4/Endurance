@@ -41,6 +41,7 @@ scorez = document.getElementById('score');
 function start() { 
 
 sec.style.display = 'none';
+size.style.display = 'none';
 btns.style.display = 'none';
 btn1.style.display = 'none';
 scorez.style.display = 'none';
