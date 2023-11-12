@@ -212,11 +212,15 @@ if(target.style.height == '95px' &&  target.style.width == '95px') {
 
 target.style.height = '75px';
 target.style.width = '75px';
+barrier.style.width = '80px';
+barrier.style.height = '80px';    
 
 } else {
 
 target.style.height = '95px';
 target.style.width = '95px';
+barrier.style.width = '100px';
+barrier.style.height = '100px';    
 
 }
             
