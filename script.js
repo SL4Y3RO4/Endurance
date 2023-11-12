@@ -204,7 +204,7 @@ outline.style.top = y3 + "px";
 }
 */
 
-size = document.getElementbyId('size');
+size = document.getElementById('size');
 size.addEventListener('click', function() {
 
 if(target.style.height == '95px' &&  target.style.width == '95px') {
