@@ -216,6 +216,8 @@ target.style.width = '75px';
 
 target.style.height = '95px';
 target.style.width = '95px';
+
+}
             
 });
 
