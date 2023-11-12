@@ -12,6 +12,7 @@ let scorez;
 let d3fault;
 let time;
 let insegna = document.getElementById('insegna');
+let size;
 
 
 i = document.getElementById('barrier');
@@ -202,5 +203,20 @@ outline.style.top = y3 + "px";
 
 }
 */
+
+size = document.getElementbyId('size');
+size.addEventListener('click', function() {
+
+if(target.style.height == '95px' &&  target.style.width == '95px') {
+
+target.style.height = '75px';
+target.style.width = '75px';
+
+} else {
+
+target.style.height = '95px';
+target.style.width = '95px';
+            
+});
 
   
