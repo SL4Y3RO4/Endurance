@@ -106,8 +106,6 @@ i.style.right = z + "px";
 
 }
 
-
-
 if(event.key == 's') {
 
 this.sec.style.display = 'block';
@@ -119,6 +117,12 @@ if(event.key == 'd') {
 
 document.body.style.cursor = 'pointer';
             
+}
+
+if(event.key == 'c') {
+
+document.body.style.cursor = "url(cyanWideCircle.png), auto";
+corner.style.cursor = "url(cyanWideCircle.png), auto";
 }
        
 });
