@@ -124,6 +124,12 @@ if(event.key == 'c') {
 document.body.style.cursor = "url(cyanWideCircle.png), auto";
 corner.style.cursor = "url(cyanWideCircle.png), auto";
 }
+
+if(event.key == 'v') {
+
+document.body.style.cursor = "url(cyanMiniCircle.png), auto";
+corner.style.cursor = "url(cyanMiniCircle.png), auto";
+}
        
 });
 
