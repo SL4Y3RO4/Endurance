@@ -130,7 +130,16 @@ if(event.key == 'v') {
 document.body.style.cursor = "url(cyanMiniCircle.png), auto";
 corner.style.cursor = "url(cyanMiniCircle.png), auto";
 }
+
+if(event.key == 'k')
+
+target.style.background = "red";
+target.style.border = "red";
+
+document.body.style.cursor = "url(redBall.png), auto";
+corner.style.cursor = "url(redBall.png), auto";
        
+     
 });
 
 
