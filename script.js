@@ -209,7 +209,7 @@ sound.play();
 
 }
 
-/*
+*
 outline = document.getElementById('outline');
 document.addEventListener('mousemove', cursore);
 
@@ -222,7 +222,7 @@ outline.style.left = x3 + "px";
 outline.style.top = y3 + "px";
 
 }
-*/
+
 
 size = document.getElementById('size');
 size.addEventListener('click', function() {
