@@ -141,7 +141,7 @@ corner.style.cursor = "url(redBall.png), auto";
 
 }
 
-if( event.key == 's') {
+if( event.key == 's' || event.key == ' ') {
 
         sec.style.display = 'none';
         size.style.display = 'none';
