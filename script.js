@@ -106,7 +106,7 @@ i.style.right = z + "px";
 
 }
 
-if(event.key == 's') {
+if(event.key == 'h') {
 
 this.sec.style.display = 'block';
 scorez.style.display = 'block';
@@ -131,14 +131,70 @@ document.body.style.cursor = "url(cyanMiniCircle.png), auto";
 corner.style.cursor = "url(cyanMiniCircle.png), auto";
 }
 
-if(event.key == 'k')
+if(event.key == 'k') {
 
 target.style.background = "red";
 target.style.border = "red";
 
 document.body.style.cursor = "url(redBall.png), auto";
 corner.style.cursor = "url(redBall.png), auto";
-       
+
+}
+
+if( event.key == 's') {
+
+        sec.style.display = 'none';
+        size.style.display = 'none';
+        btns.style.display = 'none';
+        btn1.style.display = 'none';
+        scorez.style.display = 'none';
+        insegna.style.display = 'none';
+
+        time = setInterval(() => {
+
+        pi.innerHTML = "Decay: " + decay;
+        decay--;
+        
+        if(decay == -1) {
+        
+        clearInterval(time);
+        sec.style.display = 'block';
+        //btns.style.display = 'block';
+        //btn1.style.display = 'block';
+        scorez.style.display = 'block';
+        insegna.style.display = 'block';
+        pi.innerHTML = "Game Over";
+        i.remove();
+        
+        }
+        
+        }, 180);
+
+        let t1mer;
+        let s = 0;
+
+        function tim3r() { 
+
+        let sec = setInterval(() => {
+
+        t1mer = document.getElementById('sec');
+        t1mer.innerHTML = "seconds: " + s;
+        s++;
+
+        if(decay == -1) {
+
+        clearInterval(sec);
+
+    }
+
+  }, 1000);
+
+ }
+
+tim3r();
+
+    
+}     
      
 });
 
