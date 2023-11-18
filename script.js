@@ -209,7 +209,7 @@ sound.play();
 
 }
 
-*
+
 outline = document.getElementById('outline');
 document.addEventListener('mousemove', cursore);
 
