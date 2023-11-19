@@ -121,14 +121,14 @@ document.body.style.cursor = 'pointer';
 
 if(event.key == 'c') {
 
-document.body.style.cursor = "url(cyanWideCircle.png), auto";
-corner.style.cursor = "url(cyanWideCircle.png), auto";
+document.body.style.cursor = "url(newBCircle.png), auto";
+corner.style.cursor = "url(newBCircle.png), auto";
 }
 
 if(event.key == 'v') {
 
-document.body.style.cursor = "url(cyanMiniCircle.png), auto";
-corner.style.cursor = "url(cyanMiniCircle.png), auto";
+document.body.style.cursor = "url(BCircle.png), auto";
+corner.style.cursor = "url(BCircle.png), auto";
 }
 
 if(event.key == 'k') {
