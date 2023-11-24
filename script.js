@@ -92,20 +92,6 @@ clearInterval(sec);
 
 let u = document.addEventListener('keydown', (event) => { 
             
-if(event.key == 'r') {
-
-let i = document.getElementById('target');
-
-x = (Math.random() * 255) + 1;
-y = (Math.random() * 255) + 1;
-z = (Math.random() * 255) + 1;
-
-i.style.left = x + "px";    
-i.style.top = y + "px";  
-i.style.right = z + "px";  
-
-}
-
 if(event.key == 'h') {
 
 this.sec.style.display = 'block';
