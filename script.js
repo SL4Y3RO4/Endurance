@@ -139,6 +139,10 @@ target.style.border = "red";
 document.body.style.cursor = "url(redBall.png), auto";
 corner.style.cursor = "url(redBall.png), auto";
 
+} if(event.key == 'r') {
+
+window.location.reload();
+
 }
 
 if(event.key == 's' || event.key == ' ') {
