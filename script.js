@@ -104,8 +104,8 @@ if(event.key == 'e') {
 
 let n = prompt('insert a number(cyan=0, purple=1, green=2, black=3, red=4)');
 
-h1.style.color = color[n];
-p.style.color = color[n];
+sec.style.color = color[n];
+score.style.color = color[n];
             
 }
 
