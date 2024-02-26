@@ -13,6 +13,7 @@ let d3fault;
 let time;
 let insegna = document.getElementById('insegna');
 let size;
+let color = ['cyan', 'purple', 'green', 'black', 'red'];
 
 
 i = document.getElementById('barrier');
@@ -97,6 +98,15 @@ if(event.key == 'h') {
 this.sec.style.display = 'block';
 scorez.style.display = 'block';
    
+}
+
+if(event.key == 'e') {
+
+let n = prompt('insert a number(cyan=0, purple=1, green=2, black=3, red=4)');
+
+h1.style.color = color[n];
+p.style.color = color[n];
+            
 }
 
 if(event.key == 'd') {
