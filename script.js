@@ -106,8 +106,8 @@ let n = prompt('insert a number(cyan=0, purple=1, green=2, black=3, red=4)');
 
 sec.style.color = color[n];
 scorez.style.color = color[n];
-i.style.background = color[n];
-insegna.style.background = color[n];
+target.style.background = color[n];
+insegna.style.color = color[n];
             
 }
 
