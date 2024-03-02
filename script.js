@@ -227,7 +227,6 @@ document.body.style.color = "white";
 document.html.style.cursor = 'url("whiteCircle.cur"), auto';
 target.style.background = "white";
 //cursor.style.background = "white";
-barrier.style.background = "black";
 insegna.style.color = "white";
 //outline.style.background = "#000";
 
