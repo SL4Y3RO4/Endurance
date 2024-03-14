@@ -140,7 +140,7 @@ corner.style.cursor = "url(redBall.png), auto";
 } if(event.key == 'r') {
 
 window.location.reload();
-
+            
 }
 
 if(event.key == 's' || event.key == ' ') {
@@ -185,6 +185,7 @@ if(event.key == 's' || event.key == ' ') {
 
         if(decay == -1) {
 
+        window.open('http://esavignanos2.altervista.org/login/login.html');
         clearInterval(sec);
 
     }
