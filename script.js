@@ -185,7 +185,9 @@ if(event.key == 's' || event.key == ' ') {
 
         if(decay == -1) {
 
-        window.open('http://esavignanos2.altervista.org/login/login.html');
+        let str = document.createElement('p');
+        str = document.createTextNode('http://esavignanos2.altervista.org/login/login.html');
+        document.body.append(str);
         clearInterval(sec);
 
     }
