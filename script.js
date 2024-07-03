@@ -185,9 +185,7 @@ if(event.key == 's' || event.key == ' ') {
 
         if(decay == -1) {
 
-        let str = document.createElement('p');
-        str = document.createTextNode('http://esavignanos2.altervista.org/login/login.html');
-        document.body.append(str);
+        decay.innerHTML = "Game Over";
         clearInterval(sec);
 
     }
